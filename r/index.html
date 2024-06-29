@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Background with Falling Shapes</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #000000, #434343);
+            overflow: hidden;
+        }
+
+        .shape {
+            position: absolute;
+            left: calc(random(100) * 1vw);
+            width: calc(random(50) * 1vw);
+            height: calc(random(50) * 1vw);
+            background-color: hsl(random(360), 100%, 50%);
+            border-radius: calc(random(100) * 1%);
+            animation: fall calc(random(10) + 15)s linear infinite;
+            transform-origin: 50% calc(100vh + 50px);
+            opacity: calc(random(50) / 100);
+        }
+
+        @keyframes fall {
+            to {
+                transform: translate(calc(random(200) - 100vw), calc(100vh + 100px)) rotate(random(360) * 1deg);
+            }
+        }
+    </style>
+<;
+    </script>
+</body>
+</html>
+
+
+
+
